@@ -1,1 +1,0 @@
-alert("You are on my app");
