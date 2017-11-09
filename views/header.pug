@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    script(src='/javascripts/bootstrap.min.js')
+  body
+    header
+        ul(class="nav nav-tabs nav-fill ")
+            each val in mails
+                li(class="nav-item")
+                    a(class=val === title ? "nav-link active" : "nav-link" href="./" + val)= val
+    block content
