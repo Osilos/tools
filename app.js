@@ -10,6 +10,9 @@ var users = require('./routes/users');
 var mails = require('./routes/mails');
 
 var app = express();
+var database = require('./database/database.js');
+var mails;
+database.connect();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

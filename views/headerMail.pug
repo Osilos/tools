@@ -1,8 +1,10 @@
-extend header
+extends header
 
+block header
 	header
 		ul(class="nav nav-tabs nav-fill ")
 			each val in mails
 				li(class="nav-item")
-					a(class=val === title ? "nav-link active" : "nav-link" href="./" + val)= val
+					a(class=val.name === title ? "nav-link active" : "nav-link" href=url + "/" + val.name)= val.name
 	block content
+	
